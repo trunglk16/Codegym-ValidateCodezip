@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function is_usZipCode(str) {
+       regexp = /^[^A-Za-z]{5} - (?:[^A-Za-z]){4}|[^A-Za-z]{5}-(?:[^A-Za-z]){4}$/;
+
+       return regexp.test(str);
+
+    }
+    var zipcode = "03201 - 2150";
+    console.log(is_usZipCode(zipcode));
+    var zipcode = "03201-2150";
+    console.log(is_usZipCode(zipcode));
+    var zipcode = "7892";
+    console.log(is_usZipCode(zipcode));
+
+    var zip = prompt("Nhap chuoi zipcode de kiem tra");
+    is_usZipCode(zip);
+</script>
+
+</body>
+</html>
